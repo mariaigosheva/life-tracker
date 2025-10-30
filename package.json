@@ -1,6 +1,6 @@
 {
-  "name": "Life-Tracker",
-  "description": "https://scrimba.com/react-challenges-c02n/~014/s0fn7uk7at/head",
+  "name": "life-tracker",
+  "description": "A personal life tracker and daily diary built with React and Vite.",
   "scripts": {
     "start": "vite",
     "dev": "vite",
