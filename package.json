@@ -1,7 +1,7 @@
 {
   "name": "life-tracker",
   "description": "A personal life tracker and daily diary built with React and Vite.",
-  "homepage": "https://mariaigoseva.github.io/life-tracker",
+  "homepage": "https://mariaigosheva.github.io/life-tracker/",
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
