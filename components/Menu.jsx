@@ -1,54 +1,101 @@
-import React, { useEffect } from "react";
-
-export default function Menu({ skip }) {
-  function scrollDown() {
-    window.scrollTo({
-      top: window.innerHeight * 2,
-      behavior: "smooth",
-    });
-  }
-
-  useEffect(() => {
-    if (skip) scrollDown();
-  }, [skip]);
-
-  const menuItems = [
-    { icon: "./images/goals.svg", label: "Goals" },
-    { icon: "./images/to-do-list.svg", label: "To Do List" },
-    { icon: "./images/monthly-report.svg", label: "Reports", onClick: scrollDown },
-    { icon: "./images/settings.svg", label: "Settings" },
-    { icon: "./images/highlights.svg", label: "Highlights", highlight: true },
-    { icon: "./images/new-entry.svg", label: "New Entry" },
-  ];
-
-  return (
-    <div className="menu-wrapper flex flex-col items-center py-6">
-      <div className="header-text-container mb-6">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
-          Life Tracker
-        </h1>
-      </div>
-
-      <div className="main-menu-container grid grid-cols-3 gap-4">
-        {menuItems.map((item, index) => (
-          <button
-            key={index}
-            onClick={item.onClick}
-            className={`menu-item-button flex flex-col items-center p-3 rounded-xl bg-white shadow hover:bg-gray-100 dark:bg-slate-800 dark:hover:bg-slate-700 transition-all ${
-              item.highlight ? "ring-2 ring-blue-500" : ""
-            }`}
-          >
-            <img
-              src={item.icon}
-              alt={item.label}
-              className="menu-icon w-10 h-10 mb-2"
-            />
-            <p className="text-sm text-gray-700 dark:text-gray-200">
-              {item.label}
-            </p>
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
+// diaryData.js
+export default [
+  {
+    id: 1,
+    date: "April 1, 2025",
+    title: "First Day of the Month",
+    text: "Started the month with a long walk and a cup of coffee. Feeling inspired!",
+    mood: "😊",
+  },
+  {
+    id: 2,
+    date: "April 2, 2025",
+    title: "Work and Coffee",
+    text: "Lots of coding today. Built new UI components and learned more about React.",
+    mood: "💻",
+  },
+  {
+    id: 3,
+    date: "April 3, 2025",
+    title: "Quiet Evening",
+    text: "Took some time off, read a book, and watched a movie.",
+    mood: "📖",
+  },
+  {
+    id: 4,
+    date: "April 4, 2025",
+    title: "Gym Day",
+    text: "Went to the gym after work. Great energy boost!",
+    mood: "💪",
+  },
+  {
+    id: 5,
+    date: "April 5, 2025",
+    title: "Weekend Vibes",
+    text: "Enjoyed a lazy Saturday morning. Brunch with friends.",
+    mood: "☕️",
+  },
+  {
+    id: 6,
+    date: "April 6, 2025",
+    title: "Nature Escape",
+    text: "Went hiking in the hills. Beautiful scenery.",
+    mood: "🌲",
+  },
+  {
+    id: 7,
+    date: "April 7, 2025",
+    title: "Back to Work",
+    text: "Had productive meetings and planned the week ahead.",
+    mood: "📅",
+  },
+  {
+    id: 8,
+    date: "April 8, 2025",
+    title: "Code Flow",
+    text: "Got into the zone — fixed a tricky bug!",
+    mood: "🧠",
+  },
+  {
+    id: 9,
+    date: "April 9, 2025",
+    title: "Rainy Day",
+    text: "Worked from home. Rain outside made it cozy.",
+    mood: "🌧️",
+  },
+  {
+    id: 10,
+    date: "April 10, 2025",
+    title: "Creative Mood",
+    text: "Started sketching UI layouts for a new project.",
+    mood: "🎨",
+  },
+  {
+    id: 11,
+    date: "April 11, 2025",
+    title: "Social Time",
+    text: "Dinner with friends. Lots of laughs!",
+    mood: "🍷",
+  },
+  {
+    id: 12,
+    date: "April 12, 2025",
+    title: "Weekend Coding",
+    text: "Experimented with Tailwind animations. Learned a lot.",
+    mood: "⚡",
+  },
+  {
+    id: 13,
+    date: "April 13, 2025",
+    title: "Sunday Reset",
+    text: "Meal prep, journaling, and organizing for the week.",
+    mood: "🧘‍♀️",
+  },
+  {
+    id: 14,
+    date: "April 14, 2025",
+    title: "Motivated Monday",
+    text: "New week, new goals. Feeling determined!",
+    mood: "🔥",
+  },
+];
